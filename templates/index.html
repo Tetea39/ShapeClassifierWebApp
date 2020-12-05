@@ -14,10 +14,17 @@
 let canvas;
 let resultDiv;
 let video;
+let vidOption = {
+    video:{
+        facingMode:{
+            exact: "environment"
+        }
+    }
+};
 
 function setup(){
     canvas = createCanvas(400, 400);
-    video = createCapture(VIDEO);
+    video = createCapture(vidOption);
     video.size(64,64);
     background(255);
 
